@@ -1,2 +1,2 @@
 # ci-crud
-Simple codeigniter crud
+Documentation codeigniter CRUD
