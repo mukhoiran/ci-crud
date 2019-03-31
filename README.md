@@ -1,2 +1,2 @@
-# ci-ready
-Set up codeigniter for dovelopment project
+# ci-crud
+Simple codeigniter crud
