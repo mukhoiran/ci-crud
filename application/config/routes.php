@@ -56,4 +56,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 // New ROUTES
 $route['news'] = 'news';
+$route['news/(:any)'] = 'news/view/$1';
 $route['(:any)'] = 'pages/view/$1';
