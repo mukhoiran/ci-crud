@@ -50,4 +50,12 @@ class News_model extends CI_Model {
     public function delete_news($id){
       return $this->db->delete('news', array('id'=>$id));
     }
+
+    function data($number,$offset){
+      return $query = $this->db->get('news',$number,$offset)->result();
+    }
+
+    function data_qty(){
+      return $this->db->get('news')->num_rows();
+    }
 }

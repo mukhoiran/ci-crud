@@ -55,7 +55,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 // New ROUTES
-$route['news'] = 'news';
+$route['news'] = 'news/index/1';
+$route['news/(:num)'] = 'news/index/$1';
 $route['news/create'] = 'news/create';
 $route['news/update/(:any)'] = 'news/update/$1';
 $route['news/delete/(:any)'] = 'news/delete/$1';

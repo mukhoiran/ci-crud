@@ -11,9 +11,17 @@ class News extends CI_Controller {
 
 	public function index()
 	{
-    $data['news'] = $this->news_model->get_news();
+    // $data['news'] = $this->news_model->get_news();
     $data['title'] = 'News archive';
 
+    $data_qty = $this->news_model->data_qty();
+		$this->load->library('pagination');
+		$config['base_url'] = base_url('news');
+		$config['total_rows'] = $data_qty;
+		$config['per_page'] = 2;
+		$from = $this->uri->segment(2);
+		$this->pagination->initialize($config);
+		$data['news'] = $this->news_model->data($config['per_page'],$from);
 		$this->load->view('news/index',$data);
 	}
 
