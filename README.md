@@ -1,2 +1,2 @@
 # ci-crud
-Documentation codeigniter CRUD
+CRUD on CodeIgniter
